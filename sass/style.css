@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(211, 211, 211);
+  background-color: #d1d1d1;
 }
 
 .row {
@@ -11,26 +11,72 @@ header {
   background-color: rgb(100, 139, 255);
 }
 header .header-container {
-  padding: 3vh 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+header .header-container .img-part {
+  border-bottom: 5px solid white;
+  width: 25%;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
+  position: relative;
 }
-header .header-container img {
-  width: 15%;
+header .header-container .img-part img {
+  border-radius: 50%;
+  width: 100%;
+  background-color: white;
+  z-index: 3;
 }
 @media (max-width: 600px) {
-  header .header-container img {
-    width: 20%;
+  header .header-container .img-part img {
+    width: 80%;
   }
 }
-@media (max-width: 600px) {
-  header .header-container {
-    padding: 1vh 0;
-  }
-  header .header-container img {
-    width: 40%;
-  }
+header .text-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+header .text-part h1,
+header .text-part p,
+header .text-part h3 {
+  text-align: center;
+}
+header .text-part h1 {
+  font-size: 30px;
+}
+header .text-part h3 {
+  font-size: 20px;
+}
+header .text-part p {
+  font-size: 14px;
+  color: grey;
+}
+header .text-part a {
+  border: none;
+  background-color: rgb(100, 139, 255);
+  height: 40px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  border: 1px solid rgb(54, 101, 243);
+  text-decoration: none;
+}
+header .text-part a:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(54, 101, 243);
 }
 
 .information {
@@ -42,7 +88,8 @@ header .header-container img {
 }
 .information .row .info-item {
   width: 100%;
-  border: 2px solid #000;
+  border: 2px solid rgb(0, 27, 107);
+  background-color: #f1f5ff;
   border-radius: 10px;
   overflow-x: hidden;
   display: flex;
@@ -54,6 +101,7 @@ header .header-container img {
   width: 100%;
   display: flex;
   align-items: center;
+  background-color: rgb(149, 173, 247);
 }
 .information .row .info-item .head-main .icon {
   width: 35px;
@@ -64,16 +112,17 @@ header .header-container img {
 }
 .information .row .info-item .head-main .icon i {
   font-size: 18px;
-  color: #000;
+  color: #fff;
 }
 .information .row .info-item .head-main .head-text {
   padding-left: 3vh;
-  color: #000;
+  color: #03294b;
 }
 .information .row .info-item .head-main .head-text p {
   font-size: 25px;
   margin: 0;
   padding: 0;
+  font-weight: bolder;
 }
 .information .row .info-item .body-main {
   width: 93%;
@@ -84,9 +133,51 @@ header .header-container img {
   font-size: 15px;
 }
 .information .row .info-item .body-main .sub-title {
-  color: #000;
+  color: #0f0f0f;
   padding: 0;
   margin: 0;
+}
+.information .row .info-item .body-main .facilities-icons-main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #8daac8;
+  padding: 2vh 0;
+  border-radius: 10px;
+}
+.information .row .info-item .body-main .facilities-icons-main .item {
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+.information .row .info-item .body-main .facilities-icons-main .item a {
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+.information .row .info-item .body-main .facilities-icons-main .item i {
+  font-size: 25px;
+  color: #0e5797;
+}
+.information .row .info-item .body-main .facilities-icons-main .item p {
+  padding: 1vh 0;
+  margin: 0;
+  color: #fff;
+  font-size: 15px;
+}
+.information .row .info-item .body-main .facilities-icons-main .item:hover a i {
+  color: #fff;
+}
+.information .row .info-item .body-main .facilities-icons-main .item:hover a p {
+  color: #fff;
 }
 .information .row .info-item:hover {
   background-color: rgb(183, 183, 183);
